@@ -1,16 +1,9 @@
-N = int(input())  # 설문조사를 한 사람 수: 3
+new_vote = []
+for n in range(int(input())):
+    vote = input()
+    new_vote.append(vote)
 
-cute_cnt = 0
-not_cute_cnt = 0
-
-for n in range(N):
-    vote = int(input())  # 어떤 의견 표명했는지?
-    if vote == 1:
-        cute_cnt += 1
-    else:
-        not_cute_cnt += 1
-
-if cute_cnt > not_cute_cnt:
-    print('Junhee is cute!')
+if new_vote.count('0') > new_vote.count('1'):
+    print('Junhee is not cute!')
 else:
-    print("Junhee is not cute!")
+    print('Junhee is cute!')
