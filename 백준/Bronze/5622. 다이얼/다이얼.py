@@ -1,12 +1,11 @@
-dial = [
-    'ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQRS', 'TUV', 'WXYZ'
-]
-word = input()
+dial = ['abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz']
+word = list(input().lower())
 
-time = 0
-for i in dial:
-    for n in i:
-        for w in word:
-            if n == w:
-                time += dial.index(i) + 3
-print(time)
+time = []
+for j in word:
+    for i in dial:
+        if j in i:
+            time.append(dial.index(i) + 3)
+        else:
+            pass
+print(sum(time))
