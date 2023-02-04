@@ -1,9 +1,7 @@
-
 import statistics
-word = input().upper()
-
-
-if len(statistics.multimode(word)) >= 2:
+word = list(input().upper())
+most_ = statistics.multimode(word)
+if len(most_) >= 2:
     print('?')
 else:
-    print(statistics.mode(word))
+    print(*most_)
