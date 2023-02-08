@@ -1,11 +1,10 @@
-T = int(input())  # 테스트 케이스 수 : 4
-for t in range(T):
+for _ in range(int(input())):
     score = list(map(int, input().split()))
 
     score.remove(max(score))
     score.remove(min(score))
-
-    if max(score) - min(score) >= 4:
-        print('KIN')
-    else:
+    score.sort()
+    if score[-1] - score[0] < 4:
         print(sum(score))
+    else:
+        print('KIN')
