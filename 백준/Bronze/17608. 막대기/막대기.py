@@ -1,13 +1,12 @@
-
 import sys
 input = sys.stdin.readline
-N = int(input())  # 막대기 개수
-height = [int(input()) for _ in range(N)]
+stick = [int(input()) for _ in range(int(input()))]
+stick.reverse()
 
-big = 0
-cnt = 0
-for i in reversed(height):  # 리스트 뒤집기
-    if big < i:
+big = stick[0]
+cnt = 1
+for i in stick:
+    if i > big:
         big = i
         cnt += 1
 print(cnt)
