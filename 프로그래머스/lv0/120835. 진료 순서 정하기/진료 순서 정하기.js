@@ -1,7 +1,7 @@
 function solution(emergency) {
     var answer = [];
     // 정렬 후 뒤집기 : sort는 원본 변경, slice를 이용해서 사본 생성
-    const sortReverse = emergency.slice().sort((a, b) => a - b).reverse()
+    const sortReverse = emergency.slice().sort((a, b) => b - a)
     for (let i = 0; i < sortReverse.length; i++){
         answer.push([sortReverse[i], i + 1])
     }
