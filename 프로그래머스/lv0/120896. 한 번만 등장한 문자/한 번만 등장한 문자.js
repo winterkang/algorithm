@@ -6,9 +6,7 @@ function solution(s) {
     }
     let answer = '';
     for (const [key, value] of Object.entries(count)){
-        if (value === 1){
-            answer += key
-        }
+        if (value === 1)answer += key
     }
     return [...answer].sort().join('');
 }
