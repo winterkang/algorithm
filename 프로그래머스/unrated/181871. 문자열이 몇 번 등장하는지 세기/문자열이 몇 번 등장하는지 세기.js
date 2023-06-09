@@ -5,6 +5,5 @@ function solution(myString, pat) {
         if (pat === myString.slice(i, i + patLen))
             cnt += 1
     }
-    // console.log(cnt)
     return cnt;
 }
