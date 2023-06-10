@@ -18,8 +18,7 @@ function solution(s) {
         const sum = arrNum.reduce((acc, cur) => acc + cur)
         return sum
     }else{ // 'Z'가 있다면 전체 합에서 cnt 빼기
-        const sumNum = arrNum.filter(item => typeof item === 'number').reduce((acc, cur) => acc + cur)
-        console.log(sumNum)
+        const sumNum = arrNum.filter(item => !isNaN(item)).reduce((acc, cur) => acc + cur)
         return sumNum - cnt
     }
 }
