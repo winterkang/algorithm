@@ -7,7 +7,7 @@ function solution(s) {
     })
 
     // 'Z'의 인덱스를 찾아서 바로 앞의 값들의 합을 구하기
-    cnt = 0
+    let cnt = 0
     for (let i = 0; i < arrNum.length; i++){
         if (arrNum[i] === 'Z'){
             cnt += arrNum[i-1]
