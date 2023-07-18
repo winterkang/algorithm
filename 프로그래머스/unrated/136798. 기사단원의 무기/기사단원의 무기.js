@@ -5,12 +5,14 @@ function solution(number, limit, power) {
         for (let j = 1; j <= Math.sqrt(i); j++){ // 시간초과 방지를 위해서 i제곱근까지 반복
             if (i % j === 0){ // 나누어 떨어져도 약수
                 cnt++
-                if (i / j !== j){ // 나눈 값이 j가 아니어도 약수
+                // 나눈 값이 j가 아니어도 약수
+                if (i / j !== j){ // i = 16, j = 4일때, 4가 중복으로 들어가면 안되니까 그 부분 방지
                     cnt++
                 }
             }
         }
         divisor.push(cnt)
+    
     }
     // divisor의 요소가 limit을 넘으면 power로 바꾸기
     for (let i = 0; i < divisor.length; i++){
